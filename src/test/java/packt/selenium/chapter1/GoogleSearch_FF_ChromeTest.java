@@ -47,8 +47,9 @@ public class GoogleSearch_FF_ChromeTest {
     @Test
     public void tesChrome() throws Exception {
         // System.setProperty("webdriver.chrome.driver", "D:\\Packt Publishing\\Selenium Video Tutorial\\Final Script\\ExampleCode_SeleniumVideo\\Chapter1\\src\\test\\resources\\chromedriver.exe");
-        System.setProperty("webdriver.chrome.driver", "chromedriver");
-        driver = new ChromeDriver();
+        //System.setProperty("webdriver.chrome.driver", "chromedriver");
+        System.setProperty("webdriver.gecko.driver","geckodriver");
+		driver = new ChromeDriver();
         driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 		driver.manage().window().maximize();
         driver.get(baseUrl + "?gws_rd=cr,ssl&ei=ziAqVtGnIcWdugTG65X4Dw&fg=1");
