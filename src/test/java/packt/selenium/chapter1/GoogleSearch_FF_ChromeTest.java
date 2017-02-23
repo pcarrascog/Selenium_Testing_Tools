@@ -13,6 +13,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.support.ui.Select;
 public class GoogleSearch_FF_ChromeTest {
+	capabilities.setCapability("marionette", true);
     private WebDriver driver;
     private String baseUrl;
     private boolean acceptNextAlert = true;
