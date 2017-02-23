@@ -26,16 +26,16 @@ public class GoogleSearch_FF_ChromeTest {
 
     @Test
     public void testFirefox() throws Exception {
-		DesiredCapabilities capabilities = DesiredCapabilities.firefox();
+		//DesiredCapabilities capabilities = DesiredCapabilities.firefox();
 
 		// Tell the Java bindings to use Marionette.
 		// This will not be necessary in the future,
 		// when Selenium will auto-detect what remote end
 		// it is talking to.
-		capabilities.setCapability("marionette", true);
-		driver driver = new RemoteWebDriver(capabilities); 	
+		//capabilities.setCapability("marionette", true);
+		//driver driver = new RemoteWebDriver(capabilities); 	
         
-		//driver = new FirefoxDriver();
+		driver = new FirefoxDriver();
         driver.manage().window().maximize();
         driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
         driver.get(baseUrl + "?gws_rd=cr,ssl&ei=ziAqVtGnIcWdugTG65X4Dw&fg=1");
