@@ -23,18 +23,9 @@ public class GoogleSearch_FF_ChromeTest {
         baseUrl = "https://www.google.com/";
         //driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
     }
-
+/*
     @Test
     public void testFirefox() throws Exception {
-		//DesiredCapabilities capabilities = DesiredCapabilities.firefox();
-
-		// Tell the Java bindings to use Marionette.
-		// This will not be necessary in the future,
-		// when Selenium will auto-detect what remote end
-		// it is talking to.
-		//capabilities.setCapability("marionette", true);
-		//driver driver = new RemoteWebDriver(capabilities); 	
-        
 		driver = new FirefoxDriver();
         driver.manage().window().maximize();
         driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
@@ -43,13 +34,14 @@ public class GoogleSearch_FF_ChromeTest {
         driver.findElement(By.id("lst-ib")).sendKeys("Selenium");
         driver.findElement(By.name("btnG")).click();
     }
-
+*/
     @Test
     public void tesChrome() throws Exception {
         // System.setProperty("webdriver.chrome.driver", "D:\\Packt Publishing\\Selenium Video Tutorial\\Final Script\\ExampleCode_SeleniumVideo\\Chapter1\\src\\test\\resources\\chromedriver.exe");
         //System.setProperty("webdriver.chrome.driver", "chromedriver");
-        System.setProperty("webdriver.gecko.driver","/var/lib/jenkins/workspace/Selenium_Testing_Tools/geckodriver");
-		driver = new ChromeDriver();
+        //System.setProperty("webdriver.gecko.driver","/var/lib/jenkins/workspace/Selenium_Testing_Tools/geckodriver");
+		System.setProperty("webdriver.chrome.driver", "C:\\Users\\Paulo.Carrasco\\Documents\\GitHub\\Selenium_Testing_Tools\\geckodriver.exe");
+    	driver = new ChromeDriver();
         driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 		driver.manage().window().maximize();
         driver.get(baseUrl + "?gws_rd=cr,ssl&ei=ziAqVtGnIcWdugTG65X4Dw&fg=1");
